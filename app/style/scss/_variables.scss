@@ -1,0 +1,27 @@
+$yellow : #fce38a;
+$pink : #f38181;
+$green : #95e1d3;
+$black : #333333;
+$greyLight: #999999;
+//General styles
+html{
+	font-size: 14px;
+}
+%textUp{
+	text-transform: uppercase;
+}
+%linkDecor{
+	text-decoration: none;
+	color: white;
+}
+
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto');
+
+%boldMontserrat {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+%cursiveTxt{
+	font-family: 'Kaushan Script', cursive;
+}

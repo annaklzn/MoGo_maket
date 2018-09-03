@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto");
+html {
+  font-size: 14px; }
+
+.first_sect {
+  text-transform: uppercase; }
+
+.first_sect .main_nav .nav_item, .first_sect .main_ttl .ttl_btn {
+  text-decoration: none;
+  color: white; }
+
+.first_sect .main_ttl .ttl_creative {
+  font-family: 'Kaushan Script', cursive; }
+
+.first_sect {
+  background: url("../../img/main_bg.jpg");
+  color: white; }
+  .first_sect .main_nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .first_sect .main_nav .nav_item {
+      padding: 10px;
+      margin-left: 30px; }
+      .first_sect .main_nav .nav_item:hover {
+        padding-bottom: 8px;
+        color: #fce38a;
+        border-bottom: 2px solid #fce38a; }
+  .first_sect .main_ttl .ttl_creative {
+    text-transform: capitalize; }
+  .first_sect .main_ttl .ttl_btn {
+    border: 2px solid white; }
