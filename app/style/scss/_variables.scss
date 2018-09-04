@@ -5,7 +5,13 @@ $black : #333333;
 $greyLight: #999999;
 //General styles
 html{
-	font-size: 14px;
+	font-size: 16px;
+}
+p::selection {
+   background: transparent;
+}
+p::-moz-selection {
+   background: transparent;
 }
 %textUp{
 	text-transform: uppercase;
@@ -18,10 +24,34 @@ html{
 //fonts
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto');
 
-%boldMontserrat {
+%boldM{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 }
 %cursiveTxt{
 	font-family: 'Kaushan Script', cursive;
 }
+%regularM{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+
+@mixin marginLR($marginL, $marginR) {
+ 	margin-left: $marginL;
+ 	margin-right: $marginR;
+ }
+
+ @mixin marginTB($marginT, $marginB) {
+ 	margin-top: $marginT;
+ 	margin-bottom: $marginB;
+ }
+
+ @mixin paddingLR($paddingL, $paddingR) {
+ 	padding-left: $paddingL;
+ 	padding-right: $paddingR;
+ } 
+
+ @mixin paddingTB($paddingT, $paddingB) {
+ 	padding-top: $paddingT;
+ 	padding-bottom: $paddingB;
+ }

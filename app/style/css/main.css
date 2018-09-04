@@ -1,32 +1,73 @@
 @import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto");
 html {
-  font-size: 14px; }
+  font-size: 16px; }
+
+p::selection {
+  background: transparent; }
+
+p::-moz-selection {
+  background: transparent; }
 
 .first_sect {
   text-transform: uppercase; }
 
-.first_sect .main_nav .nav_item, .first_sect .main_ttl .ttl_btn {
+.first_sect .header .main_nav .nav_item, .first_sect .main_ttl .ttl_btn {
   text-decoration: none;
   color: white; }
+
+.first_sect .main_ttl .ttl_welcome {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; }
 
 .first_sect .main_ttl .ttl_creative {
   font-family: 'Kaushan Script', cursive; }
 
+.first_sect .header .main_nav .nav_item {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; }
+
 .first_sect {
   background: url("../../img/main_bg.jpg");
+  background-position-x: 43%;
   color: white; }
-  .first_sect .main_nav {
+  .first_sect .header {
     display: flex;
-    justify-content: flex-end;
-    align-items: center; }
-    .first_sect .main_nav .nav_item {
-      padding: 10px;
-      margin-left: 30px; }
-      .first_sect .main_nav .nav_item:hover {
-        padding-bottom: 8px;
-        color: #fce38a;
-        border-bottom: 2px solid #fce38a; }
-  .first_sect .main_ttl .ttl_creative {
-    text-transform: capitalize; }
-  .first_sect .main_ttl .ttl_btn {
-    border: 2px solid white; }
+    justify-content: space-between;
+    margin-bottom: 136px; }
+    .first_sect .header .logo {
+      display: inline-block;
+      width: 88px;
+      padding-top: 20px;
+      padding-bottom: 20px; }
+    .first_sect .header .main_nav {
+      display: flex;
+      align-items: center; }
+      .first_sect .header .main_nav .nav_item {
+        padding: 10px;
+        margin-left: 30px;
+        font-size: 0.875em; }
+        .first_sect .header .main_nav .nav_item:hover {
+          padding-bottom: 8px;
+          color: #fce38a;
+          border-bottom: 2px solid #fce38a; }
+  .first_sect .main_ttl {
+    text-align: center; }
+    .first_sect .main_ttl .ttl_creative {
+      text-transform: capitalize;
+      font-size: 4.5em;
+      margin-bottom: 42px; }
+    .first_sect .main_ttl .ttl_welcome {
+      font-size: 9.24em;
+      letter-spacing: -8px;
+      word-spacing: 1px;
+      line-height: 0.73; }
+    .first_sect .main_ttl .ttl_w2 {
+      margin-right: -89px; }
+    .first_sect .main_ttl .ttl_line {
+      width: 60px;
+      height: 3px;
+      background-color: white;
+      margin: 0 auto;
+      margin-top: 30px; }
+    .first_sect .main_ttl .ttl_btn {
+      border: 2px solid white; }

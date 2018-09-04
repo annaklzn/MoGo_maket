@@ -1,36 +1,65 @@
 .first_sect{
 	background: url('../../img/main_bg.jpg');
+	background-position-x: 43%;
 	@extend %textUp;
 	color: white;
-	.logo{
-
-	}
-	.main_nav{
+	.header{
 		display: flex;
-    	justify-content: flex-end;
-    	align-items: center;
-		.nav_item{
-			@extend %linkDecor;
-			padding: 10px;
-			margin-left: 30px;
-			&:hover{
-				padding-bottom: 8px;
-				color: $yellow;
-				border-bottom: 2px solid $yellow;
+		justify-content: space-between;
+		margin-bottom: 136px;
+		.logo{
+			display: inline-block;
+			width: 88px; 
+			@include paddingTB(20px, 20px);
+		}
+		.main_nav{
+			display: flex;
+			align-items: center;
+			.nav_item{
+				@extend %linkDecor;
+				@extend %regularM;
+				padding: 10px;
+				margin-left: 30px;
+				font-size: 0.875em;
+				&:hover{
+					padding-bottom: 8px;
+					color: $yellow;
+					border-bottom: 2px solid $yellow;
+					}
 			}
 		}
 	}
+	
+	
 	.main_ttl{
+		text-align: center;
 		.ttl_creative{
 			text-transform: capitalize;
 			@extend %cursiveTxt;
+			font-size: 4.5em;
+			margin-bottom: 42px;
 		}
 		.ttl_welcome{
+			@extend %boldM;
+    		font-size: 9.24em;
+    		letter-spacing: -8px;
+    		word-spacing: 1px;
+    		line-height: 0.73;
+		}
+		.ttl_w2{
+			margin-right: -89px;
 
+		}
+		.ttl_line{
+			width: 60px;
+			height: 3px;
+			background-color: white;
+			margin: 0 auto;
+			margin-top: 30px;
 		}
 		.ttl_btn{
 			@extend %linkDecor;
-
+			
 			border: 2px solid white;
 		}
 	}
