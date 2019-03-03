@@ -1,0 +1,130 @@
+.first_sect{
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+		&:before {
+		    content: '';
+		    z-index: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-image: linear-gradient(to bottom,$pink,$yellow);
+			opacity: .9; 
+	  	}
+	.header{
+	 	margin-top: 29px;
+	 	nav{
+	 		float: right;
+	 		.nav_item{
+	 			font-size: 0.98em;
+				color: $white;
+				text-decoration: none;
+				padding: 6px;
+				margin-left: 38px;
+				&:hover{
+					color: $yellow;
+					border-bottom: 2px solid $yellow;
+				}
+	 		}
+	 		.icon_cart{
+	 			display: inline-block;
+				width: 15px;
+				height: 15px;
+				background-image: url(../img/cart.png);
+			}
+			.icon_src{
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				background-image: url(../img/cart.png);
+			}
+		}
+	}
+	.main_content{
+	 	color: $white;
+	 	text-align: center;
+	 	.cursiv{
+	 		font-size: 4.8em;
+	 		@extend %cursiveTxt;
+	 		margin-top: 165px;
+	 	}
+	 	.main_head{
+	 		color: $white;
+	 		font-size: 10em;
+	 		@extend  %boldM;
+	 		@extend %textUp;
+	 		margin-top: -30px;
+    		line-height: 0.9;
+    		letter-spacing: -9px;
+	 	}
+	 	hr{
+	 		border:none;
+	 		width: 60px;
+	 		background-color: $white;
+	 		color: $white;
+	 		height: 2px;
+	 		margin-top: -85px;
+	 	}
+	 	.main_btn{
+	 		display: inline-block;
+	 		padding: 10px 30px;
+	 		@extend  %boldM;
+	 		font-size: 0.93em;
+	 		border: 2px solid $white;
+	 		margin-top: 43px;
+	 		opacity: 0.9;
+	 		&:hover{
+	 			opacity: 1;
+	 			box-shadow: 0px 0px 10px $white;
+	 		}
+	 		&:active{
+	 			box-shadow: 0px 0px 10px $white;
+	 		}
+	 	}
+	 	
+	}
+	.main_nav_bottom{
+	 	display: grid;
+	 	grid-template-columns: 1fr 1fr 1fr 1fr;
+	 	margin-bottom: $gutter;
+	 		.nav_bottom_item{
+	 			color: $white;
+	 			font-size: 1.3em;
+	 			@extend %regularM;
+	 			padding-left: $gutter;
+	 			padding-top: $gutter;
+	 			padding-bottom: $gutter;
+	 			@extend %textUp;
+	 			margin-top: 130px;
+	 			opacity: 0.6;
+	 			&:hover{
+	 				opacity: 1;
+	 				hr{
+	 					&:before{
+	  						content: '';
+					  		position: absolute;
+					 	 	left: 0;
+					  		top: 0;
+					  		bottom: 0;
+					  		background: $pink;
+					  		right: calc(85% - 10px);
+						}
+	 				}
+	 			}
+	 			span{
+	 				@extend %boldM;
+	 				
+	 			}
+	 			hr{
+	 				position: relative;
+	 				border:none;
+	 				background-color: $white;
+	 				color: $white;
+	 				height: 2px;	 					
+	 			}
+	 		}
+	}
+}

@@ -1,0 +1,32 @@
+.sect_two{
+	background-color: $white;
+	text-align: center;
+	@extend %regularM;
+
+	.foto-link{
+		margin-top: 5 * $gutter;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		margin-bottom: 5 * $gutter;
+	}
+	.counter-ref{
+		background-color: $green;
+		color: $white;
+		.container{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			.ref-item{
+				border-left: 0.3px solid $white;
+				border-right: 0.3px solid $white;
+				@include paddingTB(88px, 88px);
+				@extend %regularM;
+				@extend %textUp;
+				span{
+					@extend  %boldM;
+					font-size: 4.8em;
+	 				
+				}
+			}
+		}
+	}
+}

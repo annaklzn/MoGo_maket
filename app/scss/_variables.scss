@@ -1,0 +1,116 @@
+$yellow : #fce38a;
+$pink : #f38181;
+$green : #95e1d3;
+$black : #333333;
+$greyLight: #999999;
+$white: #fff;
+$gutter: 20px;
+//General styles
+*{
+	box-sizing: border-box;
+	&:before, &:after{
+		box-sizing: border-box;
+	}
+}
+html{
+	font-size: 15px;
+	font-family: 'Montserrat', sans-serif;
+	color: $greyLight;
+}
+p::selection {
+   background: transparent;
+}
+p::-moz-selection {
+   background: transparent;
+}
+
+.container{
+	z-index: 1;
+	width: 1200px;
+	margin: 0 auto;
+	@media (max-width: 1200px) {
+		width: 100%;
+	}
+}
+.grid{
+	display: grid;
+}
+.img-responsive{
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+}
+	
+%textUp{
+	text-transform: uppercase;
+}
+%linkDecor{
+	text-decoration: none;
+	color: $white;
+}
+
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto');
+
+%boldM{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+%cursiveTxt{
+	font-family: 'Kaushan Script', cursive;
+}
+%regularM{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+
+@mixin marginLR($marginL, $marginR) {
+ 	margin-left: $marginL;
+ 	margin-right: $marginR;
+ }
+
+ @mixin marginTB($marginT, $marginB) {
+ 	margin-top: $marginT;
+ 	margin-bottom: $marginB;
+ }
+
+ @mixin paddingLR($paddingL, $paddingR) {
+ 	padding-left: $paddingL;
+ 	padding-right: $paddingR;
+ } 
+
+ @mixin paddingTB($paddingT, $paddingB) {
+ 	padding-top: $paddingT;
+ 	padding-bottom: $paddingB;
+ }
+
+ a{
+	color: $white;
+	text-decoration: none;
+	@extend %textUp;
+
+}
+.hrPink{
+	border:none;
+	width: 60px;
+	background-color: $pink;
+	color: $pink;
+	height: 2px;
+	margin-bottom: 2 * $gutter;
+}
+.cursive-sec{
+	text-align: center;
+	color: $black;
+	font-size: 1.6em;
+	 @extend %cursiveTxt;
+	 margin-top: 90px;
+}
+.main_head-sec{
+	text-align: center;
+	color: $black;
+	font-size: 2em;
+	@extend  %boldM;
+	@extend %textUp;
+	margin-top: $gutter;
+	margin-bottom: $gutter;
+}
