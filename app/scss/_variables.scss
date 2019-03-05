@@ -63,6 +63,10 @@ p::-moz-selection {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 }
+%regularR{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
 
 @mixin marginLR($marginL, $marginR) {
  	margin-left: $marginL;

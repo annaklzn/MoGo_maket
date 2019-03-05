@@ -1,0 +1,29 @@
+.serv_row{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	.serv_item{
+		@extend %regularR;
+		padding: $gutter;
+		position: relative;
+		img{
+			position: absolute;
+			top: 24%;
+		}
+
+		.serv_head{
+			color: $black;
+			@extend %textUp;
+			@extend %regularM;
+		}
+		p{
+			margin-left: 55px;
+		}
+
+	}
+}
+.row_1{
+	border-bottom: 1px solid #e5e5e5;
+}
+.row_2{
+	margin-bottom: 6 * $gutter;
+}

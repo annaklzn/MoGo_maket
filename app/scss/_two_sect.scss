@@ -1,13 +1,35 @@
 .sect_two{
 	background-color: $white;
 	text-align: center;
-	@extend %regularM;
+	@extend %regularR;
 
 	.foto-link{
 		margin-top: 5 * $gutter;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		margin-bottom: 5 * $gutter;
+		.foto-link-img{
+			position: relative;
+			&:hover{
+				
+				transform: translate(-10px, -10px);
+				box-shadow: 13px 9px 0px 1px $green;
+				
+			}
+			&:before {
+				content: ''; 
+				z-index: 1;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-image: linear-gradient(to bottom, $pink, $yellow);
+				opacity: .9; 
+			  	}
+
+		}
+		
 	}
 	.counter-ref{
 		background-color: $green;

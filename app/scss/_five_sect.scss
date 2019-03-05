@@ -1,0 +1,128 @@
+.five_sect{
+	.container{
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 6* $gutter;
+		margin-top: 90px;
+		p{
+			text-align: center;
+			margin-bottom: $gutter;
+		}
+		.txt_acc{
+	    	margin-left: $gutter;
+	    	text-align: left;
+	    	height: auto;
+	    	.acc-item{
+	    		margin-bottom: 13px;
+	    	}
+	    	label{
+	    		padding: 20px 56px;
+			    position: relative;
+			    z-index: 20;
+			    display: block;
+			    height: 60px;
+			    cursor: pointer;
+			    border: 1px solid $greyLight;
+			    color: $black;
+				@extend %textUp;
+				@extend %regularM;
+				&:before{
+					content: '';
+					position: absolute;
+				    width: 32px;
+				    height: 32px;
+				    left: 15px;
+				    top: 15px;
+				}
+	    	}
+	    	.ac-1{
+	    		&:before{
+					background: transparent url(../img/pic.png) no-repeat center center;
+				}
+	    	}
+	    	.ac-2{
+	    		&:before{
+					background: transparent url(../img/equalize.png) no-repeat center center;
+				}
+	    	}
+	    	.ac-3{
+	    		&:before{
+					background: transparent url(../img/bullseve.png) no-repeat center center;
+				}
+	    	}
+		 	.ac-small{
+		 			overflow-y: scroll;
+		 			&::-webkit-scrollbar { width: 5px; height: 3px;}
+					&::-webkit-scrollbar-button { background-color: f5f5f5;}
+					&::-webkit-scrollbar-track { background-color: f5f5f5;}
+					&::-webkit-scrollbar-track-piece { background-color: f5f5f5;}
+					&::-webkit-scrollbar-thumb { height: 50px; background-color: $green; border-radius: 3px;}
+					&::-webkit-scrollbar-corner { background-color: $green;}}
+					&::-webkit-resizer { background-color: $green;}
+		    		p{
+		    			text-align: left;
+		    			padding: 0.25 * $gutter $gutter;
+						
+		    		}
+
+		    }
+
+		}
+
+//аккордион на сss
+	    .txt_acc input:checked + label,
+		.txt_acc input:checked + label:hover{
+			text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
+		}
+
+		.txt_acc label:after,
+		.txt_acc input:checked + label:after{
+			content: '';
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			right: 15px;
+	    	top: 20px;
+			background: transparent url(../img/arrow_down.png) no-repeat center center;
+			transform: rotate(180deg);
+		}
+		.txt_acc input:checked + label:hover:after{
+	    	background: transparent url(../img/arrow_down.png) no-repeat center center;
+	    	transform: rotate(180deg);
+		}
+	  	.txt_acc input{
+	    	display: none;
+		}
+		.txt_acc article{
+		    background: rgba(255, 255, 255, 0.5);
+		    margin-top: -1px;
+		    overflow: hidden;
+		    height: 0px;
+		    position: relative;
+		    z-index: 10;
+		    transition:
+		        height 0.3s ease-in-out,
+		        box-shadow 0.6s linear;
+		}
+		.txt_acc input:checked ~ article{
+		    transition:
+		        height 0.5s ease-in-out,
+		        box-shadow 0.1s linear;
+		    box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+		}
+		.txt_acc input:checked ~ article.ac-small{
+	    	height: 175px;
+		}
+		.txt_acc input:checked ~ article.ac-medium{
+		    height: 175px;
+		}
+		.txt_acc input:checked ~ article.ac-large{
+		    height: 175px;
+		}
+
+//acc end
+
+}
+.rev_slider{
+	background-color: #greyLight;
+
+}
